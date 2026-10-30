@@ -1,0 +1,15 @@
+<%- include("partials/header.ejs") %>
+
+<% if (locals.adjective && locals.noun) { %>
+  <h1><%= adjective %> <%= noun %></h1>
+  <p>Название готово. Осталось найти гараж и три аккорда.</p>
+<% } else { %>
+  <h1>Генератор панк-рок групп 🤘</h1>
+  <p>Собери название, от которого соседям станет не по себе.</p>
+<% } %>
+
+<form action="/submit" method="POST">
+  <button type="submit">Придумать название</button>
+</form>
+
+<%- include("partials/footer.ejs") %>
